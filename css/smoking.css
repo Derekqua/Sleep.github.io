@@ -1,0 +1,124 @@
+﻿body {
+    margin: 0px 0px 0px 0px;
+}
+
+.accordian-container {
+    width: 50%;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+button.accordian {
+    width: 100%;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+button.accordian:hover {
+    background-color:gray;
+}
+
+.accordian-content {
+    padding: 0 20px;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    max-height: 0;
+    overflow: hidden;
+    font-size: 20px;
+    background-color: white;
+}
+
+#header {
+    text-align: center;
+}
+
+.columns {
+    display: flex;
+    background-color: wheat;
+    padding: 20px 20px;
+}
+
+.column-1 {
+    text-align: center;
+    flex: 1;
+    padding: 10px 10px 10px 10px;
+}
+
+.column-2 {
+    text-align: center;
+    flex: 1;
+    padding: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.column-3 {
+    text-align: center;
+    flex: 1;
+    padding: 10px 10px 10px 10px;
+}
+
+.tips {
+    display: block;
+    background-color: wheat;
+    padding: 20px 50px;
+    margin-bottom: 0px;
+}
+
+.form {
+    text-align: center;
+    padding: 40px 40px;
+    background-color: whitesmoke;
+}
+
+.images {
+    width: 100px;
+    height: 100px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../media/img_parallax.png");
+    /* Set a specific height */
+    height: 703px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+}
+
+section {
+    background-color: yellow;
+    width: 100%;
+}
+
+.icon {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 10%;
+}
+
+.iconAni {
+    position: relative;
+    animation-name: moving;
+    animation-duration: 4s;
+}
+
+@keyframes moving {
+    0% {bottom: 0px;}
+    50% {bottom: 25px;}
+    100% {bottom: 0px;}
+}
+
+#savePrice {
+    background-color: yellow;
+    font-size: 20px;
+}
