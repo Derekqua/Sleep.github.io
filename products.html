@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/style-brandon.css">
+    <link rel="stylesheet" type="text/css" href="css/animate-brandon.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+
+
+
+</head>
+<body>
+    <div w3-include-html="header.html"></div>
+    
+    <div class="animate zoomin">
+
+        <h1 style="text-align:center; font-size:50px; color:#fff" class="animate zoomin">Must Buy Health Products</h1>
+        <form id="form" onchange="calculate()">
+
+            <div class="content">
+                <img src="images/fishoil.png" width="100px" height="100px" />
+                <h1>
+                    <span id="p1">Fish Oil</span>
+                </h1>
+                <h2>
+                    Fish oil is a source of omega-3 fatty acids, a type of polyunsaturated fat that supports general health and wellbeing.
+                    <br>
+
+
+                    <input type="radio" name="r" value="medium"> Medium
+                    <input type="radio" name="r" value="large"> Large
+                    <br>
+                    <label id="fo"></label>
+                    <br>
+                    Quantity:
+                    <input type="number" id="n1" value="0">
+
+
+                </h2>
+
+                <br>
+                <img src="images/wlpowder.jpg" width="100px" height="100px">
+                <br>
+                <h1>
+                    <span id="p2">Optimum Nuitrition </span>
+                </h1>
+                <h2>
+                    A complete protein means that it contains all of the essential amino acids that the body needs to function optimally
+                    <br>
+                    <input type="radio" name="r2" value="medium"> Medium
+                    <input type="radio" name="r2" value="large"> Large
+                    <br>
+                    <label id="foo"></label>
+                    <br>
+                    Quantity:
+                    <input type="number" id="n2" value="0">
+                </h2>
+                <br>
+
+                <img src="images/sleep.jpg" width="100px" height="100px" />
+                <h1>
+                    <span id="p3">Melotonin Pills</span>
+                </h1>
+                <h2>
+                    Malotonin ss a pea-sized gland found just above the middle of your brain. This Pill helps your body know when it's time to sleep and wake up
+                    <br>
+                    <input type="radio" name="r3" value="medium"> Medium
+                    <input type="radio" name="r3" value="large"> Large
+                    <br>
+                    <label id="fos"></label>
+                    <br>
+
+                    Quantity:
+                    <input type="number" id="n3" value="0">
+                </h2>
+                <br>
+                <img src="images/ppowder.jpg" width="100px" height="100px" />
+                <h1>
+                    <span id="p4">Whey Protein</span>
+                </h1>
+                <h2>
+                    Whey protein is the protein contained in whey, the watery portion of milk that separates from the curds when making cheese
+                    <br>
+                    <input type="radio" name="r4" value="medium"> Medium
+                    <input type="radio" name="r4" value="large"> Large
+                    <br>
+                    <label id="fop"></label>
+                    <br>
+                    Quantity:
+                    <input type="number" id="n4" value="0">
+                </h2>
+
+                <div class="cart" onclick="show()" >
+                    <img src="images/cart.png" width="40px" height="40px" />
+                </div>
+                <div class="price">
+                    <label id="pr1">0 x Fish Oil</label><br>
+                    <label id="pr2">0 x Optimum Nuitrition </label><br>
+                    <label id="pr3">0 x Melatonin Pills</label><br>
+                    <label id="pr4">0 x Whey Protein</label><br>
+                    <label>Shipping Price: $10</label><br>
+
+                    _________________________________________<br>
+                    <label id="price">Total Price: $0</label>
+
+                </div>
+
+
+
+                <div id="overlay1">
+
+                    <div class="pic1">
+
+                        <img src="images/fishoil2.jpg" width="200px" height="200px" />
+                        <li>Energy: 41 calories</li>
+                        <li>Vitamin A: 4,500 international units (IU)</li>
+                        <li>Vitamin D: 450 IU</li>
+                        <li>Saturated fatty acids: 1.017 g</li>
+                        <li>Monounsaturated fatty acids: 2.102 g</li>
+                        <li>Polyunsaturated fatty acids: 1.014 g</li>
+                        <li>Cholesterol: 26 milligrams (mg)</li>
+                        These unique fats have a number of biological effects
+                        that may benefit the cardiovascular system. For example,
+                        -omega-3s seem to help ease inflammation, possibly prevent the
+                        formation of dangerous clots in the bloodstream, and might also
+                        discourage deadly heart arrhythmias.
+
+                    </div>
+                    <div class="pic2">
+
+                        <center><img src="images/wlpowder2.jpg" width="200px" height="200px" /></center>
+                        <li>21g protein per serving</li>
+                        <li>4.5g BCAAs</li>
+                        <li>Added 3.6g glutamine</li>
+                        <li>No harmful chemicals</li>
+                        <li>Contains useful amino acids</li>
+                        <li>Looses weight in a healthy manner</li>
+                        <br>
+                        We are amongst the top notch quality of this field and are involved in providing a superior quality
+                        range of Weight Loss Powder to clients. This Weight Loss Powder is a great way to achieve your fitness
+                        goals by burning on calories and reducing on weight. Our reputed customers can purchase these products
+                        at nominal prices.
+
+
+
+                    </div>
+
+
+                    <div class="pic3">
+
+                        <center><img src="images/sleep.jpg" width="200px" height="200px" /></center>
+                        <li>Support Better Sleep</li>
+                        <li>Reduce Sympthon  of Seasonal Depression</li>
+                        <li>Increase Levels of Human Grown Hormones</li>
+                        <li>Promote Eye Health</li>
+                        <li>Dosage:</li>
+                        Taken in doses of 0.5-10 mg per day
+
+
+                    </div>
+
+
+
+                    <div class="pic4">
+
+                        <center><img src="images/ppowder.jpg" width="200px" height="200px" /></center>
+                        <li>Boost Protein and BCAA Intake</li>
+                        <li>Improve Satiety and Promote Weight Loss</li>
+                        <li>Provide numerous health benefit</li>
+                        <li>Lower Blood Pressure, Blood Sugar </li>
+                        <li>Reduce Stress and depression</li>
+                        <li>Protects againts Cancerr</li>
+
+                    </div>
+                </div>
+
+
+                <center>
+                    <button type="button" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:400px;">
+                        Check out
+                    </button>
+                </center>
+            </div>
+        </form>
+
+
+
+        <div class="right>
+
+
+            <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px;">
+                Login
+            </button>
+
+            <div id="modal-wrapper" class="modal">
+
+                <form class="modal-content animate" id="checkout" onsubmit="submit()">
+
+                    <div class="imglogin">
+                        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+
+                        <img src="images/tick.jpg" alt="Avatar" class="avatar">
+                        <h1 style="text-align:center">Ready to Check out?</h1>
+                    </div>
+
+                    <div class="login">
+
+
+                        <p></p>
+                        <label>Name:</label>
+                        <input type="text" required placeholder="Enter Username" name="uname" id="username">
+                        <p></p>
+                        <label>Address:</label><br>
+                        <input type="text" required placeholder="Enter Address" name="address" id="address">
+                        <p></p>
+                        <label>Credit / Bank Card</label><br>
+                        <input type="password" required placeholder="Enter Card Number" name="cnum" id="cnum">
+                        <br>
+                        <h3>
+                            <center><label id="fprice">Total Price: $0</label></center>
+                        </h3>
+                        <button type="submit" onclick="checkout()" value="comfirm">Check Out</button>
+
+
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <div class="down">
+            <video controls poster="images/fishoil2.jpg" width="100%" height="100%">
+                <source src="media/lifestyle.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+
+        </div>
+
+
+    </div>
+    <div w3-include-html="footer.html"></div>
+
+
+    <script>
+        // If user clicks anywhere outside of the modal, Modal will close
+
+        var modal = document.getElementById('modal-wrapper');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        w3.includeHTML();
+    </script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/app2.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>

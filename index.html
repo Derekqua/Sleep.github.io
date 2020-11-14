@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+
+
+    <!--Header-->
+    <script src="js/header.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div w3-include-html="header.html"></div>
+    </header>
+
+    <div class="login" style="height:600px;background-color:white">
+        <h1 style="text-align:center;margin-top:0;padding-top:20px">Healthy Living</h1>
+
+        <img src="images/heart.png" alt="cardiogram" class="icons" style="height:280px;width:280px;margin-left:490px">
+        <br />
+        <div>
+            <img src="images/gym.png" alt="bike" class="icons" style="margin-left:490px">
+            <img src="images/sleep.png" alt="salad" class="icons">
+            <img src="images/no-smoking.png" alt="smoke" class="icons">
+        </div>
+        <!--Login Button-->
+        <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-left:530px;margin-top:20px">
+            Login
+        </button>
+
+
+        <div id="modal-wrapper" class="modal">
+
+            <form class="modal-content animate" id="login">
+
+                <div class="imglogin">
+                    <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+                    <img src="1.png" alt="Avatar" class="avatar">
+                    <h1 style="text-align:center">Modal Popup </h1>
+                </div>
+
+                <div class="login">
+                    <h2 style="padding-left:30px">Login Form</h2>
+                    <input type="text" placeholder="Enter Username" name="uname" id="username">
+                    <input type="password" placeholder="Enter Password" name="psw" id="password">
+                    <button type="button" onclick="login()" value="Login">Login</button>
+                    <button type="button" onclick="regis()" margin-right:34px; margin-top:26px;">Register an account?</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Another section-->
+    <div style="height:410px;background-color:lightcyan">
+        <img src="images/dream.png" alt="dream" style="width: 500px;height: 350px;float:right;margin-right:60px">
+
+        <div class="last" style="padding:80px 0 50px 100px">
+            <h1 style="color: #f5822b;margin-bottom:30px">Sleep plays a vital role in good health and well-being throughout your life.</h1>
+            <h3 style="width:500px;margin-bottom:40px">Getting enough quality sleep at the right times can help protect your mental health, physical health ..... </h3>
+            <a href="Sleep.html" class="dream">Find Out More</a>
+        </div>
+    </div>
+
+    <!--Another section-->
+    <div style="height:410px;background-color: lightpink">
+
+        <img src="images/jeff.png"  alt="dream" style="width: 500px;height: 350px;float:left;margin-left:100px;padding-top:30px">
+
+        <div class="last" style="padding:80px 0 50px 700px">
+            <h1 style="color: black;margin-bottom:30px">"Everyone has a lifestyle! However, not everyone's lifestyle is healthy..."</h1>
+            <h5 style="width:500px;margin-bottom:40px"></h5>
+            <a href="lifestyle.html" class="dream">Find Out More</a>
+        </div>
+
+
+    </div>
+
+    <div style="height:410px;background-color: lightgrey">
+        <img src="images/smoking2.jpg" alt="dream" style="width: 500px;height: 350px;float:right;margin-right:60px;margin-top:20px">
+
+        <div class="last" style="padding:80px 0 50px 100px">
+            <h1 style="color: #f5822b;margin-bottom:30px">"Smoking is one of the worst habits someone can pick up."</h1>
+            <h3 style="width:500px;margin-bottom:40px">Find out how it affects you, and other interesting facts about smoking.</h3>
+            <a href="Smoking.html" class="dream">Find Out More</a>
+        </div>
+    </div>
+
+    <!--Another section-->
+    <div style="height:410px">
+
+        <img src="images/shopping-cart.png" alt="dream" style="width: 500px;height: 400px;float:left;margin-left:40px">
+
+        <div class="last" style="padding:80px 0 50px 700px">
+            <h1 style="color: black;margin-bottom:30px">Must have Products to have a Healthy Lifestyle!</h1>
+            <h5 style="width:500px;margin-bottom:40px"></h5>
+            <a href="products.html" class="dream">Find Out More</a>
+        </div>
+
+
+    </div>
+
+
+    <!--Video-->
+    <div class="v" style="height:530px;background-color:antiquewhite">
+        <h2 style="text-align:center;font-weight:800;padding-top:50px">7 Tips For A Healthy Living</h2>
+        <video controls class="video">
+            <source src="media/healthyliving.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <footer>
+        <div w3-include-html="footer.html"></div>
+    </footer>
+
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

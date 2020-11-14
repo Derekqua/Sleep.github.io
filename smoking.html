@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Wayne Lee" />
+    <meta name="description" content="Smoking" />
+    <title>Negative effects of smoking</title>
+    <link rel="stylesheet" href="css/smoking.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="js/smoking.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <!-- To Do: Reference to the JavaScript library for including a HTML page -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+    <!-- To Do: Include the header section -->
+    <div w3-include-html="header.html"></div>
+
+    <div class="parallax">
+
+        <div class="iconAni">
+            <img src="images/smoking.png" class="icon" />
+        </div>
+        
+        <h2 id="header">Not only do some people not exercise or practice healthy eating, they make their condition worse by smoking.</h2>
+       
+
+        <div class="accordian-container">
+            <h1 id="header">The side-effects of smoking: </h1>
+
+            <button class="accordian">Anxiety and irritability</button>
+            <div class="accordian-content">
+                <p>
+                    Nicotine withdrawal causes smoke addicts to be irritable
+                    and on edge when they do not smoke regularly.
+                    This can affect the moods of yourself and the people around
+                    you.
+                </p>
+            </div>
+
+            <button class="accordian">Lung cancer</button>
+            <div class="accordian-content">
+                <p>
+                    Smoking significantly increases the risk of the smoker
+                    getting lung cancer, being the highest mortality rate of
+                    all types of cancers. This is because smoking damages the
+                    sensitive lung tissue, including DNA damage.
+                </p>
+            </div>
+
+            <button class="accordian">Heart disease</button>
+            <div class="accordian-content">
+                <p>
+                    The nicotine in smoke reduces the amount of oxygen
+                    being absorbed by your heart, raises blood pressure,
+                    and increase the chances of a blood clot, leading to
+                    heart attacks.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="tips">
+        <h1 id="header">Here are some tips to start quitting smoking: </h1>
+        <div class="columns">
+            <div class="column-1">
+                <img src="images/calendar.png" class="images" />
+                <h2 id="header">Tip #1: Set a quit date</h2>
+                <p>
+                    Quitting can be tough, but setting a date will decrease the chances of you backing out.
+                    In the time leading up to your quit date, research on different ways to stop. (e.g counseling, text message program, etc.)</>
+                    If you fail, don't give up, and start again.
+                </p>
+            </div>
+
+            <div class="column-2">
+                <img src="images/thinking.png" class="images" />
+                <h2 id="header">Tip #2: Choose a reason for quitting</h2>
+                <p>Having a reason will significantly increase the chance of you sticking to your quit plan. Some common reasons why people choose to quit are to: </p>
+                <li>Save money</li>
+                <li>Live a healthier and longer life</li>
+                <li>Set a good example for their children</li>
+            </div>
+
+            <div class="column-3">
+                <img src="images/warning.png" class="images" />
+                <h2 id="header">Tip #3: Learning to deal with failure</h2>
+                <p>You might give in to temptation and smoke a cigarette after a week. That is fine, but learning to not give up after failing is the hardest step of quitting.</p>
+                <p>Learning to get back up is the best way to ensure success at the end of your journey to a smoke-free lifestyle.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <h1 id="header">How much will you save by quitting smoking?</h1>
+        <p>A very common reason why people quit is because of the amount of money they will save. Why not calculate the amount of money you save by quitting smoking?</p>
+        <form id="cigForm">
+            <label>Enter number of cigarettes smoked per day: </label>
+            <input type="number" id="number" onchange="cigCalc()" /> <br />
+            <br />
+            <label>Enter price of a pack of cigarettes: </label>
+            <input type="number" id="price" onchange="cigCalc()" /> <br />
+        </form>
+        <b><p id="savePrice"></p></b>
+    </div>
+
+
+    <!-- To Do: Include the footer section -->
+        <div w3-include-html="footer.html"></div>
+
+    <!-- To Do: Call the includeHTML() function when loading the page -->
+    <script>
+        w3.includeHTML();
+    </script>
+
+</body>
+</html>

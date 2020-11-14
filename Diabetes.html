@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta author="Aaron Choo" />
+    <meta charset="utf-8" />
+    <title>Diabetes</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/header.js" defer></script>
+    <link rel="stylesheet" href="css/header.css" />
+    <!-- To Do: Reference to the JavaScript library for including a HTML page -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+    <script src="js/comment.js"></script>
+    <!-- Create a full width Bootstrap container-->
+    <div class="container-fluid">
+        <!-- To Do: Include the header section -->
+        <div w3-include-html="header.html"></div>
+
+        <script>
+            // If user clicks anywhere outside of the modal, Modal will close
+
+            var modal = document.getElementById('modal-wrapper');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <!--Side navigation-->
+        <div class="sidenav">
+            <a href="#what is diabetes">What is diabetes</a>
+            <a href="#type 1 diabetes">Type 1 diabetes</a>
+            <a href="#type 1 diabetes symptoms">Symptoms of type 1 diabetes</a>
+            <a href="#type 2 diabetes">Type 2 diabetes</a>
+            <a href="#type 2 diabetes symptoms">Symptoms of type 2 diabetes</a>
+            <a href="#prevention of type 2 diabetes">How to prevent type 2 diabetes</a>
+            <a href="#References">References</a>
+            <a href="#respond">Comments</a>
+        </div>
+
+        <div class="main">
+            <section id="what is diabetes">
+                <h1>What is diabetes</h1>
+                <p>
+                    Diabetes occurs when the body produces insufficient insulin
+                    — a hormone that keeps the blood sugar level balanced
+                    — or alternatively, does not respond properly to insulin,
+                    resulting in a high amount of sugar in the blood.
+                </p>
+                <img src="images/diabetes.jpg" />
+            </section>
+
+            <section id="type 1 diabetes">
+                <h1>Type 1 diabetes</h1>
+                <p>
+                    Type 1 diabetes is an autoimmune disease.<br>
+                    The immune system attacks and destroys cells in the pancreas, where insulin is made. <br>
+                    It’s unclear what causes this attack. <br>
+                    About 10 percent of people with diabetes have this type.<br>
+                </p>
+            </section>
+
+            <section id="type 1 diabetes symptoms">
+                <h1>What are the symptoms of type 1 diabetes?</h1>
+                <p>
+                    Symptoms of type 1 diabetes are serious and usually happen quickly, over a few days to weeks. Symptoms can include
+                </p>
+                <li>
+                    <ul>increased thirst and urination</ul>
+                    <ul>increased hunger</ul>
+                    <ul>blurred vision</ul>
+                    <ul>fatigue</ul>
+                    <ul>unexplained weight loss</ul>
+                </li>
+                Sometimes the first symptoms of type 1 diabetes are signs of a life-threatening condition called diabetic ketoacidosis (DKA) NIH external link. Some symptoms of DKA include
+                <li>
+                    <ul>breath that smells fruity</ul>
+                    <ul>dry or flushed skin</ul>
+                    <ul>nausea or vomiting</ul>
+                    <ul>stomach pain</ul>
+                    <ul>trouble breathing</ul>
+                    <ul>trouble paying attention or feeling confused</ul>
+                    DKA is serious and dangerous. If you or your child have symptoms of DKA, contact your health care professional right away, or go to the nearest hospital emergency room.
+                </li>
+            </section>
+
+            <section id="type 2 diabetes">
+                <h1>Type 2 diabetes</h1>
+                <p>
+                    Type 2 diabetes occurs when your body becomes resistant to insulin, and sugar builds up in your blood.<br>
+                    You can develop type 2 diabetes at any age, even during childhood.<br>
+                    However, this type of diabetes occurs most often in middle-aged and older people.<br>
+                    Type 2 is the most common type of diabetes.
+                </p>
+            </section>
+
+            <section id="type 2 diabetes symptoms">
+                <h1>What are the symptoms of type 2 diabetes?</h1>
+
+                Symptoms of diabetes include
+                <li>
+                    <ul>increased thirst and urination</ul>
+                    <ul>increased hunger</ul>
+                    <ul>feeling tired</ul>
+                    <ul>blurred vision</ul>
+                    <ul>numbness or tingling in the feet or hands</ul>
+                    <ul>sores that do not heal</ul>
+                    <ul>unexplained weight loss</ul>
+                    Symptoms of type 2 diabetes often develop slowly—over the course of several years—and can be so mild that you might not even notice them. Many people have no symptoms. Some people do not find out they have the disease until they have diabetes-related health problems, such as blurred vision or heart disease.
+                </li>
+
+            </section>
+
+            <section id="prevention of type 2 diabetes">
+                <h1>How can I lower my chances of developing type 2 diabetes?</h1>
+                Research such as the Diabetes Prevention Program External link, sponsored by the National Institutes of Health, has shown that you can take steps to reduce your chances of developing type 2 diabetes if you have risk factors for the disease. Here are some things you can do to lower your risk:
+                <li>
+                    <ul>Lose weight if you are overweight, and keep it off. You may be able to prevent or delay diabetes by losing 5 to 7 percent of your current weight.1 For instance, if you weigh 200 pounds, your goal would be to lose about 10 to 14 pounds.</ul>
+                    <ul>Move more. Get at least 30 minutes of physical activity, such as walking, at least 5 days a week. If you have not been active, talk with your health care professional about which activities are best. Start slowly and build up to your goal.</ul>
+                    <ul>Eat healthy foods. Eat smaller portions to reduce the amount of calories you eat each day and help you lose weight. Choosing foods with less fat is another way to reduce calories. Drink water instead of sweetened beverages.</ul>
+                </li>
+            </section>
+
+            <section id="References">
+                <h1>References</h1>
+                <a href="https://www.niddk.nih.gov/health-information/diabetes/overview">U.S. National Institute of Diabetes and Digestive and Kidney Diseases</a>
+                <br>
+                <a href="https://www.everydayhealth.com/diabetes/genetics/">Background image</a>
+            </section>
+
+            <script type="txt" src="name.js">
+            </script>
+
+            <div id="respond">
+
+                <h3>Leave a Comment</h3>
+
+                <form method="post" id="commentform" onclick="js/comment.js">
+
+                    <label for="comment_author" class="required">Your name</label>
+                    <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+                    <br />
+
+                    <label for="email" class="required">Your email;</label>
+                    <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+                    <br />
+
+                    <label for="comment" class="required">Your message</label>
+                    <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea>
+
+                    <!--comment_post_ID value hard-coded as 1-->
+                    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
+                    <input id="submitbutton" name="submit" type="button" value="Submit comment" onclick="test()" />
+
+                </form>
+
+            </div>
+        </div>
+
+        <!-- To Do: Include the footer section -->
+        <div w3-include-html="footer.html"></div>
+        <!-- End of Bootstrap container div -->
+        <script>
+            w3.includeHTML();
+        </script>
+    </div>
+
+</body>
+</html>
