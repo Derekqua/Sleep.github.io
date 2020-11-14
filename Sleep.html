@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Sleep (Healthy Living)">
+    <meta name="author" content="Derek Qua">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/dusk/50/000000/sleep.png"> <!--Favicon-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <!--Header-->
+    <script src="js/header.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <!--Derekcssjs-->
+    <link rel="stylesheet" type="text/css" href="css/sleep.css">
+    <script src="js/sleep.js" defer></script>
+    <title>Sleep</title>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div w3-include-html="header.html"></div>
+    </header>
+
+
+
+    <div class="parallax">
+        <div class="overlay"></div>
+        <h1 class="mb-4">We Care</h1>
+        <h1 style="color:black; padding-left:50px;font-size:450%;font-weight:700">About Your Health</h1>
+        <br />
+        <h2 class="subheading" style="font-size:large; color: black; padding-left:50px;font-size:150%;font-weight:300">Everyday We Bring Hope and Smile to the Patient We Serve</h2>
+
+        <!--Modal-->
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" class="round-button" style="margin-top:40px;margin-left:50px;height:50px;width:100px">Shop</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="orderForm" name="myForm" onSubmit="return submitForm()">
+                    <h1>Order Form</h1>
+                    <fieldset id="cakeDetail">
+                        <legend>Item Type</legend>
+                        <!--Bedsize-->
+                        <label for="cakeType" class="labelAlign">Bed Size:</label>
+                        <select name="cakeType" id="cakeType" required onchange="calculateTotal()">
+                            <option value="">Please select the type of bed size</option>
+                            <option value="Single">Single (400)</option>
+                            <option value="Super Single">Super Single (450)</option>
+                            <option value="Queen">Queen (500)</option>
+                            <option value="King">King (550)</option>
+                        </select>
+                        <br />
+                        <!--Matress-->
+                        <label for="matress" class="labelAlign">Type Of Matress:</label>
+                        <select name="matress" id="matress" required onchange="calculateTotal()">
+                            <option value="">Please select the type of matress</option>
+                            <option value="foam">6 Inch Foam Mattress(-S$60.00)</option>
+                            <option value="latex">10 Inch Bamboo Latex Pocketed Spring(+S$180.00)</option>
+                            <option value="zero">12 Inch Zero Stress Mattress(+S$110.00) </option>
+                        </select>
+                        <br />
+
+                        <!--Storage Bed-->
+                        <label for="size" class="labelAlign">Storage Bed:</label>
+                        <input type="radio" name="size" value="small" class="size" onclick="calculateTotal()"> Alice (50)
+                        <input type="radio" name="size" value="medium" class="size" onclick="calculateTotal()"> Sofia (110)
+                        <input type="radio" name="size" value="large" class="size" onclick="calculateTotal()"> Janet (180)
+                        <br />
+
+
+                        <label for="quantity" class="labelAlign">Quantity:</label>
+                        <input id="quantity" class="boxWidth" name="quatity" type="number" min="1" max="5" value="1" onchange="calculateTotal()">
+                        <br />
+
+
+                    </fieldset>
+                    <p>
+                        <h4 id="totalPrice" style="color:red;"></h4>
+                    </p>
+                    <fieldset name="Deliver to">
+                        <legend>Deliver to:</legend>
+                        <label for="iName" class="labelAlign">Name:</label>
+                        <input id="iName" class="boxWidth" name="Name" type="text" autocomplete="Name" required />
+                        <br />
+                        <label for="iAddress" class="labelAlign">Address:</label>
+                        <textarea id="iAddress" class="boxWidth" rows="2" cols="20" name="Address" autocomplete="on" required></textarea>
+                        <label for="iPostalCode" class="labelAlign">Postal Code:</label>
+                        <input id="iPostalCode" type="text" maxlength="6" size="6" name="PostalCode" required pattern="\d{6}" />
+                        <br />
+                        <label for="iTelephone" class="labelAlign">Phone #:</label>
+                        <input type="tel" id="iTelephone" class="boxWidth" name="Phone" size="8" pattern="[689]\d{7}" required />
+                        <br />
+                        <label for="iEmail" class="labelAlign">Email:</label>
+                        <input type="email" id="iEmail" class="boxWidth" name="Email" width="200" placeholder="Enter email addresses" required />
+                        <br />
+                        <label for="iDate" class="labelAlign">Date:</label>
+                        <input type="date" id="iDate" class="boxWidth" name="Date" required onclick="getdate()" />
+                        <label for="iTime" class="labelAlign">Time:</label>
+                        <input type="time" id="iTime" name="Time" value="10:00" min="10:00" max="22:00" step="1800" required />
+                        <br />
+                    </fieldset>
+
+                    <br />
+                    <input type="submit" value="Submit" />
+                    <input type="reset" id="reset" onclick="clearMessage()" />
+                    <br />
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--Introduction-->
+    <div style="background-color:lightpink ;height:250px">
+        <h3 class="introduction" style="color:black">How much do you know about sleep?</h3>
+        <h4 class="introduction" style="color:black">Sleep plays a vital role in good health and well-being throughout your life. Getting enough quality sleep at the right times can help protect your mental health, physical health, quality of life, and safety. ...    Here are some interesting facts about sleep you might not have been aware of....</h4>
+    </div>
+
+    <!--Icon-->
+    <div style="height:350px;background-color: white">
+        <h2 style="text-align:center ; padding:10px;">Benefits of Sleeping</h2>
+        <section class="icon">
+            <ul class="threeIcon">
+                <li class="i">      
+                    <img src="images/cancer.png" alt="testing" class="testing">
+                    <h3>Prevent Cancer</h3>
+                    <p>Produces <a href="https://www.verywellhealth.com/how-to-take-melatonin-3015192" class="cancer">Melatonin </a>which supress growth of tumors</p>
+                </li>
+
+                <li class="i">
+                    <img src="images/stress.png" alt="testing" class="testing">
+                    <h3>Reduce Stress</h3>
+                    <p>Lower the production of stress hormones</p>
+                </li>
+
+                <li class="i">
+                    <img src="images/battery.png" alt="testing" class="testing">
+                    <h3>Feel refreshed</h3><p>58% boost in daytime energy and concentration</p>
+                </li>
+            </ul>
+
+            <ul class="threeIcon">
+                <li class="i">
+                    <img src="images/memory.png" alt="testing" class="testing">
+                    <h3>Better Memory</h3>
+                    <p>Remember and process thing better</p>
+                </li>
+
+                <li class="i">
+                    <img src="images/performance.png" alt="testing" class="testing">
+                    <h3>Improve performance</h3>
+                    <p>Enhance your mood<br>and productivity</p>
+                </li>
+
+                <li class="i">
+                    <img src="images/fire.png" alt="testing" class="testing">
+                    <h3>Reduce Inflammation</h3>
+                    <p>Lower risk of heart-related conditions</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <!--SLider-->
+    <div style="height:450px ;background-color:lightcyan">
+
+        <section class="regular slider">
+            <div>
+                <article class="link">
+                    <a class="home-article-block-anchor Articles" href="https://www.sleepfoundation.org/articles/why-do-we-need-sleep" aria-label="Benefits of Quitting">
+                        <img src="images/sleep.jpg" alt="hidfds" typeof="Image" class="img-responsive" style="width:100%" />
+
+
+                        <div class="description" style="height:235px;">
+                            <h3>Why Do We Need To Sleep</h3>
+                            <div class="article_link_line">Getting enough sleep is essential for helping a person maintain optimal health and well-being.</div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div>
+                <article class="link">
+                    <a class="home-article-block-anchor Articles" href="https://www.helpguide.org/articles/sleep/getting-better-sleep.htm" aria-label="Benefits of Quitting">
+                        <img src="images/better.jfif" alt="hidfds" typeof="Image" class="img-responsive" style="width:100%" />
+
+
+                        <div class="description" style="height:205px">
+                            <h3>How To Sleep Better</h3>
+                            <div class="article_link_line">Tired of tossing and turning at night? Click here for tips on how to sleep better and be more energetic.</div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div>
+                <article class="link">
+                    <a class="home-article-block-anchor Articles" href="https://www.livescience.com/64920-how-learn-during-sleep.html" aria-label="Benefits of Quitting">
+                        <img src="images/learn.jpg" alt="hidfds" typeof="Image" class="img-responsive" style="width:100%" />
+
+
+                        <div class="description" style="height:205px;">
+                            <h3>Can You Learn While You Sleep?</h3>
+                            <div class="article_link_line">Sleep learning, the way people commonly think of it, is almost certainly impossible. But researchers are discovering....</div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div>
+                <article class="link">
+                    <a class="home-article-block-anchor Articles" href="https://www.livescience.com/62645-you-can-make-up-for-lost-sleep.html" aria-label="Benefits of Quitting">
+                        <img src="images/makeupsleep.jpg" alt="hidfds" typeof="Image" class="img-responsive" style="width:100%" />
+
+
+                        <div class="description" style="height:216px;">
+                            <h3>Can You Make Up for Lost Sleep?</h3>
+                            <div class="article_link_line">Good news for weekend snoozers.</div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div>
+                <article class="link">
+                    <a class="home-article-block-anchor Articles" href="https://www.livescience.com/62703-why-we-forget-dreams-quickly.html" aria-label="Benefits of Quitting">
+                        <img src="images/dream.jpg" alt="hidfds" typeof="Image" class="img-responsive" style="width:100%" />
+
+
+                        <div class="description" style="height:231px">
+                            <h3>Why can't We Remember Our Dreams?</h3>
+                            <div class="article_link_line">In waking life, quickly forgetting would land you in a doctor's office. With dreams, however, forgetting is normal. Why? </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div>
+                <article class="link">
+                    <a class="home-article-block-anchor Articles" href="https://www.medicalnewstoday.com/articles/326926.php#1" aria-label="Benefits of Quitting">
+                        <img src="images/deepsleep.jpg" alt="hidfds" typeof="Image" class="img-responsive" style="width:100%" />
+
+
+                        <div class="description">
+                            <h3>Deep Sleep May Help Treat Anxiety</h3>
+                            <div class="article_link_line">A new study between this two causal relation has shown that a sleepless night can raise anxiety by up to 30%.</div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <!--Another section-->
+    <div style="height:410px">
+        <img src="images/dream.png" alt="dream" style="width: 600px;height: 400px;float:right;margin-right:60px">
+
+        <div class="last" style="padding:80px 0 50px 100px">
+            <h1 style="color: #f5822b;margin-bottom:30px">What Is Lucid Dreaming?</h1>
+            <h5 style="width:500px;margin-bottom:40px">Having an occasional strange dream isn’t unusual—but sometimes they can border on a nightmare, resulting in stress and lost sleep....</h5>
+            <div class="button_cont"><a class="example_e" target="_blank" rel="nofollow noopener" href="https://www.sleepfoundation.org/articles/what-lucid-dreaming" >Find Out More</a></div>
+            
+        </div>
+    </div>
+
+    <!--Video-->
+    <div class="parallax" style="height:450px">
+        <video controls class="video">
+            <source src="media/What If You Sleep 2 Hours Less Every Night.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!--Another section-->
+    <div style="height:450px">
+        <img src="images/howmuchsleep.png" alt="dream" style="width: 500px;height: 300px;float:left;margin-left:50px;margin-top:80px">
+
+        <div class="last" style="padding:80px 0 50px 700px">
+            <h1 style="color: #f5822b;margin-bottom:30px">How Much Sleep Do We Really Need?</h1>
+            <h5 style="width:500px;margin-bottom:40px">Sleep is a vital indicator of overall health and well-being. We spend up to one-third of our lives asleep, and the overall state of our "sleep health" remains an essential question throughout our lifespan. Most of us know that getting...</h5>
+            <div class="button_cont"><a class="example_e" target="_blank" rel="nofollow noopener" href="https://www.sleepfoundation.org/articles/how-much-sleep-do-we-really-need">Find Out More</a></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div w3-include-html="footer.html"></div>
+    </footer>
+    
+    <script>
+        w3.includeHTML();
+    </script>
+
+
+
+</body>
+</html>
